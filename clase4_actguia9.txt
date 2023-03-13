@@ -1,0 +1,53 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaintro01;
+
+import java.util.Scanner;
+import static jdk.nashorn.internal.objects.NativeString.toLowerCase;
+import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
+import java.lang.Math;
+import static java.lang.Math.random;
+
+/**
+ *
+ * @author Lionel Messi
+ */
+public class JavaIntro01 {
+
+    /**
+     * @param args the command line arguments
+     */
+ public static void main(String[] args) {
+        
+        Scanner leer = new Scanner(System.in);
+        
+        int num ;
+        int aux = 20 ;
+        int suma = 0 ;
+        
+        do { 
+            System.out.println("Ingrese un número, le quedan: " + aux + " intentos");
+            aux = aux - 1 ;
+            num = leer.nextInt() ;
+            System.out.println(aux);
+                if (num > 0 ) {
+                    suma = suma + num ;
+                }
+                 System.out.println(suma);
+            
+                } while (aux != 0 && num != 0) ;
+
+                if (aux == 0) {
+            System.out.println("Se acabaron los intentos");  
+                    }
+        else if (num == 0) {
+            System.out.println("Se encontró el número cero");
+        }
+        System.out.println("La suma de los números leidos es: " + suma);
+ }
+}
+
+  

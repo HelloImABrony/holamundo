@@ -1,0 +1,39 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaintro01;
+
+import java.util.Scanner;
+import static jdk.nashorn.internal.objects.NativeString.toLowerCase;
+import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
+import java.lang.Math;
+
+/**
+ *
+ * @author Lionel Messi
+ */
+public class JavaIntro01 {
+
+    /**
+     * @param args the command line arguments
+     */
+ public static void main(String[] args) {
+        
+        Scanner leer = new Scanner(System.in);
+        
+        System.out.println("Ingrese una nota del 1 al 10");
+        
+        int nota = leer.nextInt() ;
+        
+        
+       while(nota > 10 || nota < 0) {
+        System.out.println("Nota inválida, ingresela nuevamente:");
+        nota = leer.nextInt();
+        
+ }
+       System.out.println("La nota " + nota + " es válida!");
+ }
+}
+  
