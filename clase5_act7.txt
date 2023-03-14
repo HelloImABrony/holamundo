@@ -1,0 +1,48 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaintro01;
+
+import java.util.Scanner;
+import static jdk.nashorn.internal.objects.NativeString.toLowerCase;
+import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
+import java.lang.Math;
+import static java.lang.Math.random;
+
+/**
+ *
+ * @author Lionel Messi
+ */
+public class JavaIntro01 {
+
+    /**
+     * @param args the command line arguments
+     */
+ public static void main(String[] args) {
+        
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese cadenas de un máximo de 5 carácteres, que comiencen con X y terminen con O");
+        
+        String frase ;
+        String term ;
+        int num = 0 ;
+        int num2 = 0;
+        
+        do {
+            frase = leer.next();
+            if (frase.substring(0,1).equalsIgnoreCase("X") && frase.substring(frase.length() - 1, frase.length()).equalsIgnoreCase("o") && frase.length() == 5) {
+            num = num + 1 ;
+        }
+            else
+                num2 = num2 + 1 ;
+        } while (!frase.equalsIgnoreCase("&&&&")) ;
+        
+       System.out.println("La cantidad de cadenas ingresadas correctamente es: " + num);
+       System.out.println("La cantidad de cadenas ingresadas incorrectamente es: " + (num2 - 1));
+               
+ }
+}
+
+  

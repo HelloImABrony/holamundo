@@ -1,0 +1,54 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaintro01;
+
+import java.util.Scanner;
+import static jdk.nashorn.internal.objects.NativeString.toLowerCase;
+import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
+import java.lang.Math;
+import static java.lang.Math.random;
+
+/**
+ *
+ * @author Lionel Messi
+ */
+public class JavaIntro01 {
+
+    /**
+     * @param args the command line arguments
+     */
+ public static void main(String[] args) {
+        
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese un valor límite positivo");
+        
+        int num ;
+        int num2 ;
+        int suma = 0 ;
+        
+        do {
+            num = leer.nextInt() ;
+            if (num < 0) {
+                System.out.println("Valor negativo, ingréselo nuevamente");
+            }
+        } while (num < 0) ;
+        
+        System.out.println("Ahora ingrese números hasta que la suma de estos supere el límite establecido");
+        
+        do {
+            num2 = leer.nextInt() ;
+            if (num2 < 0) {
+                System.out.println("No se admiten números negativos");
+            }
+            else {
+                suma = suma + num2 ;
+            }
+        } while (suma < num) ;
+        
+        System.out.println("La suma de los números ingresados (" + suma + ") superó al número límite (" + num + ")");
+        
+   
+ }

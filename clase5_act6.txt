@@ -1,0 +1,92 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaintro01;
+
+import java.util.Scanner;
+import static jdk.nashorn.internal.objects.NativeString.toLowerCase;
+import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
+import java.lang.Math;
+import static java.lang.Math.random;
+
+/**
+ *
+ * @author Lionel Messi
+ */
+public class JavaIntro01 {
+
+    /**
+     * @param args the command line arguments
+     */
+ public static void main(String[] args) {
+        
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese un número entero positivo");
+        
+        int num;
+        int num2;
+        int num3;
+        int suma;
+        String conf = "a" ;
+        
+        do {
+            num = leer.nextInt();
+            if (num < 0) {
+                System.out.println("Número incorrecto, ingrese otro.");
+            } 
+        
+            }  while(num < 0) ;
+        
+        System.out.println("Ahora ingrese otro número");
+        
+          do {
+            num2 = leer.nextInt();
+            if (num2 < 0) {
+                System.out.println("Número incorrecto, ingrese otro.");
+            } 
+        
+            }  while(num2 < 0) ;
+        
+
+          
+          do {
+              System.out.println("MENU");
+              System.out.println("1. Sumar");
+              System.out.println("2. Restar");
+              System.out.println("3. Multiplicar");
+              System.out.println("4. Dividir");
+              System.out.println("5. Salir");
+              System.out.println("Elija opción: ");
+              num3 = leer.nextInt();
+              
+              switch(num3) {
+                      case 1: {
+                          System.out.println("La suma de los 2 números es: " + (num + num2));
+                      }
+                      break;
+                      case 2: {
+                          System.out.println("La resta de los 2 números es: " + (num - num2));
+                      }
+                      break;
+                      case 3: {
+                          System.out.println("La multiplicación de los 2 números es: " + (num * num2));
+                      }
+                      break;
+                      case 4: {
+                          System.out.println("La división de los 2 números es: " + (num / num2));
+                      }
+                      break;
+                      case 5: {
+                          System.out.println("Estás seguro que desea salir? s/n");
+                          conf = leer.next();
+                      }
+                      break;
+              }
+          } while (num3 != 5 || !conf.equalsIgnoreCase("s")) ;
+               
+ }
+}
+
+  
