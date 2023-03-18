@@ -28,7 +28,6 @@ public class JavaIntro01 {
         int num;
         int num2;
         int num3;
-        int suma;
         String conf = "a" ;
         
         do {

@@ -1,0 +1,44 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaintro01;
+
+import java.util.Scanner;
+import static jdk.nashorn.internal.objects.NativeString.toLowerCase;
+import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
+import java.lang.Math;
+import static java.lang.Math.random;
+
+/**
+ *
+ * @author Lionel Messi
+ */
+public class JavaIntro01 {
+
+    /**
+     * @param args the command line arguments
+     */
+ public static void main(String[] args) {
+        
+        Scanner leer = new Scanner(System.in);
+        
+        int num, num1 ;
+        num = leer.nextInt() ;
+        num1 = leer.nextInt() ;
+        
+        EsMultiplo(num, num1) ;
+       
+       
+ }
+ 
+ public static void EsMultiplo(int num, int num1) {
+     if (num % num1 == 0) {
+         System.out.println(num + " es múltiplo de " + num1);
+     }
+     else {
+         System.out.println(num + " no es múltiplo de " + num1);
+     }
+ }
+}
