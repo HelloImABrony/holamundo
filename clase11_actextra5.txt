@@ -1,0 +1,50 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaintro01;
+
+import java.util.Scanner;
+import static jdk.nashorn.internal.objects.NativeString.toLowerCase;
+import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
+import java.lang.Math;
+import static java.lang.Math.random;
+
+/**
+ *
+ * @author Lionel Messi
+ */
+public class JavaIntro01 {
+
+    /**
+     * @param args the command line arguments
+     */
+ @SuppressWarnings("empty-statement")
+ public static void main(String[] args) {
+        
+        Scanner leer = new Scanner(System.in);
+        int num = 0;
+        int num2 = 0;
+        int suma = 0; 
+        
+        System.out.println("Ingrese la cantidad de filas de la matriz");
+        num = leer.nextInt();
+        System.out.println("Ingrese la cantidad de columnas de la matriz");
+        num2 = leer.nextInt();
+        int[][] Matriz = new int[num][num2] ;
+        
+        for (int i = 0 ; i < num ; i++) {
+            for (int j = 0 ; j < num2 ; j++) {
+                Matriz[i][j] = (int) (Math.random()*2) ;
+                System.out.print(Matriz[i][j] + " ");
+                suma += Matriz[i][j] ;
+            }
+            System.out.println("");
+        }
+        
+        System.out.println("la suma de los valores de la matriz es: " + suma);
+        
+        
+ }
+}

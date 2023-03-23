@@ -1,0 +1,107 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaintro01;
+
+import java.util.Scanner;
+import static jdk.nashorn.internal.objects.NativeString.toLowerCase;
+import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
+import java.lang.Math;
+import static java.lang.Math.random;
+
+/**
+ *
+ * @author Lionel Messi
+ */
+public class JavaIntro01 {
+
+    /**
+     * @param args the command line arguments
+     */
+ public static void main(String[] args) {
+        
+        Scanner leer = new Scanner(System.in);
+        int num = 0;
+        double suma = 0;
+        double nota1 = 0;
+        double nota2 = 0;
+        double nota3 = 0;
+        double nota4 = 0;
+        int ap = 0 ;
+        int desap = 0 ;
+        boolean fals = false ;
+        
+        double[] Vector = new double[10] ;
+        
+        for (int i = 0 ; i < 10 ; i++) {
+            num += 1 ;
+            System.out.println("Ingrese la nota del primer trabajo práctico evaluativo de1 alumno N°" + num);
+            nota1 = leer.nextInt();
+            while (nota1 < 0 || nota1 > 10) {
+                System.out.println("ERROR, ingrese un número válido");
+                nota1 = leer.nextInt();
+            } 
+            
+            System.out.println("Ahora ingrese la nota del segundo trabajo práctico");
+            
+            nota2 = leer.nextInt();
+             while (nota2 < 0 || nota2 > 10) {
+                System.out.println("ERROR, ingrese un número válido");
+                nota2 = leer.nextInt();
+            } 
+              
+             System.out.println("Ahora ingrese la nota del primer parcial");
+             
+             nota3 = leer.nextInt();
+             while (nota3 < 0 || nota3 > 10) {
+                System.out.println("ERROR, ingrese un número válido");
+                nota3 = leer.nextInt();
+            } 
+             
+             System.out.println("Ahora ingrese la nota del segundo parcial");
+             
+             nota4 = leer.nextInt();
+             
+              while (nota4 < 0 || nota4 > 10) {
+                System.out.println("ERROR, ingrese un número válido");
+                nota4 = leer.nextInt();
+            } 
+              
+            nota1 *= 0.1 ;
+            nota2 *= 0.15 ;
+            nota3 *= 0.25 ;
+            nota4 *= 0.5 ;
+            
+            suma = suma + nota1 + nota2 + nota3 + nota4 ;
+            
+            if (suma < 7) {
+                desap += 1 ;
+            }
+            else {
+                ap += 1 ;
+            }
+            
+            Vector[i] = suma ;
+            
+            
+            suma = 0 ;
+            nota1 = 0 ;
+            nota2 = 0 ;
+            nota3 = 0 ;
+            nota4 = 0 ;
+        }
+        
+        System.out.println("Notas: ");
+        
+        for (int i = 0 ; i < 10 ; i++ ) {
+            System.out.print(Vector[i] + " ,");
+        }
+        System.out.println("");
+        
+        System.out.println("La cantidad de desaprobados es: " + desap);
+        System.out.println("La cantidad de aprobados es: " + ap);
+        
+ }
+}

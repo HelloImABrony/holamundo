@@ -1,0 +1,67 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package javaintro01;
+
+import java.util.Scanner;
+import static jdk.nashorn.internal.objects.NativeString.toLowerCase;
+import static jdk.nashorn.internal.objects.NativeString.toUpperCase;
+import java.lang.Math;
+import static java.lang.Math.random;
+
+/**
+ *
+ * @author Lionel Messi
+ */
+public class JavaIntro01 {
+
+    /**
+     * @param args the command line arguments
+     */
+ public static void main(String[] args) {
+        
+        Scanner leer = new Scanner(System.in);
+        
+        int n ;
+        int n2 ;
+        int aux  = 0 ;
+        int aux2 = 0 ;
+        
+        System.out.println("Ingrese la longitud del vector");
+        
+        n = leer.nextInt() ;
+        
+        int[] Vector ;
+     Vector = new int[n];
+        
+        for (int i = 0 ; i < n ; i++) {
+            Vector[i] = (int) (Math.random() * 10) ;
+            System.out.println("Vector[" + i + "] = " + Vector[i] + " ");
+        }
+        
+        System.out.println("Qué número quiere buscar? (0/10)");
+        
+        n2 = leer.nextInt() ;
+        
+        for (int i = 0 ; i < n ; i++) {
+            if (Vector[i] == n2 && aux == 0) {
+                aux =+ 1 ;
+                aux2 = 1 ;
+                System.out.println("Se ha encontrado el número ubicado en: Vector[" + i + "]");
+            }
+            else if (Vector[i] == n2 && aux > 0) {
+                System.out.println("Se ha encontrado el número de nuevo! ubicado en: Vector [" + i + "]");
+            }
+        }
+        if (aux == 0) {
+            System.out.println("No se encontró su número :(");
+        }
+        else if (aux > 0) {
+            System.out.println("El número se ha repetido!");
+        }
+        
+ }
+ 
+}
